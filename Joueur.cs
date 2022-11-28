@@ -25,21 +25,22 @@ namespace LaboFinal_A22
         // (0)att, (1)matt, (2)def, (3)mdef, (4)hp, (5)hpTotal des entiers
         public int[] stats = new int[5];
         // habilete un attribut du type Habilete
-        Habilete habilite;
+        public Habilete habilite;
 
         // Constructeur
         //
         // reçoit tous les attributs en paramètre sauf l'habilete
         // assigne les paramètres aux attributs correspondants
-        public Joueur(int[] stats)
+        public Joueur(string[] stats)
         {
-            this.stats[0] = stats[0];
-            this.stats[1] = stats[1];
-            this.stats[2] = stats[2];
-            this.stats[3] = stats[3];
-            this.stats[4] = stats[4];
-            this.stats[5] = stats[4];
-        }
+            this.name = stats[0];
+            this.stats[0] = Convert.ToInt32(stats[1]);
+            this.stats[1] = Convert.ToInt32(stats[2]);
+            this.stats[2] = Convert.ToInt32(stats[3]);
+            this.stats[3] = Convert.ToInt32(stats[4]);
+            this.stats[4] = Convert.ToInt32(stats[5]);
+            this.stats[5] = Convert.ToInt32(stats[5]);
+        } //Fait à tester
 
 
         // enumererActions
@@ -55,14 +56,14 @@ namespace LaboFinal_A22
         {
             string enumerer = "Attaquer";
 
-            if (habilite.tour <= 0)
+            if (this.habilite.tour <= 0)
             {
-                enumerer += "," + habilite.nom;
+                enumerer += "," + this.habilite.nom;
             }
 
 
             return enumerer;
-        } //Fait
+        } //Fait à tester
 
         // attaquer
         //
@@ -70,7 +71,7 @@ namespace LaboFinal_A22
         public int attaquer ()
         {
             return this.stats[0];
-        } //Fait
+        } //Fait à tester
 
 
         // defendre
@@ -99,10 +100,10 @@ namespace LaboFinal_A22
             if (dmg <0) 
             {
                 // diminuer les points de vie du nombre de points de dommage final
-                stats[4] -= dmg;
+                this.stats[4] -= dmg;
             }
 
-        } //Fait 
+        } //Fait à tester 
 
         // estVivant
         //
@@ -114,13 +115,13 @@ namespace LaboFinal_A22
         {
             bool vivant = true;
 
-            if (stats[0] <= 0)
+            if (this.stats[0] <= 0)
             {
                 vivant = false;
             }
 
             return vivant;
-        } //Fait
+        } //Fait à tester
 
         // enumererStats
         // 
@@ -131,8 +132,8 @@ namespace LaboFinal_A22
 
         public string enumererStats ()
         { 
-            return "Nom : " + name + ", Hp : " + stats[4];
-        } //Fait
+            return "Nom : " + this.name + ", Hp : " +this.stats[4];
+        } //Fait à tester
 
     }
 }

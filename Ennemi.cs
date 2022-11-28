@@ -15,6 +15,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,23 +26,44 @@ namespace LaboFinal_A22
     {
         // attributs (public)
         // un nom 
+        public string nom;
         // att, matt, def, mdef, hp des entiers
+        public int[] stats = new int[5];
         // magique un attribut qui détermine si les attaques sont magiques ou non
+        bool magique;
 
         // Constructeur
         //
         // reçoit tous les attributs en paramètre
         // assigne les paramètres aux attributs correspondants
+        public Ennemi(string[] stats)
+        {
+            this.nom = stats[0];
+            this.stats[0] = Convert.ToInt32(stats[1]);
+            this.stats[1] = Convert.ToInt32(stats[2]);
+            this.stats[2] = Convert.ToInt32(stats[3]);
+            this.stats[3] = Convert.ToInt32(stats[4]);
+            this.stats[4] = Convert.ToInt32(stats[5]);
+            this.magique= magique;
+        } //Fait à vérifier
 
         // estMagique
         //
         // retourne l'attribut magique 
         //
         // @return bool vrai si les attaques sont magiques, faux sinon
+        public bool estMagique()
+        {
+            return this.magique;
+        } //Fait à vérifier
 
         // attaquer
         //
         // renvoie la statistique d'attaque
+        public int attaquer()
+        {
+            return this.stats[0];
+        } //Fait à vériier
 
         // defendre
         //
@@ -53,17 +75,29 @@ namespace LaboFinal_A22
         public void defendre(bool magique, int dmg)
         {
             // si l'attaque est magique
-
+            if (magique = true) 
+            {
                 // les dommages finaux sont le dommage - la défense magique
+                dmg -= stats[3];
+            }
+
 
             // sinon
-
+            else
+            {
                 // les dommages finaux sont le dommage - la défense
+                dmg -= stats[2];
+            }
 
 
-                // diminuer les points de vie du nombre de points de dommage final
 
-        }
+            // diminuer les points de vie du nombre de points de dommage final
+            if (dmg > 0)
+            {
+                stats[4] -= dmg;
+            }
+
+        } //Fait à vérifier
 
         // estVivant
         //
@@ -71,11 +105,29 @@ namespace LaboFinal_A22
         // 
         // @return bool vrai s'il reste des points de vie, faux sinon
 
+        public bool estVivant ()
+        {
+            bool vivant = true;
+            if (stats[4] <= 0)
+            {
+                vivant = false;
+            }
+
+
+            return vivant;
+        } //Fait à vérifier
+
         // enumererStats
         // 
         // envoie un string contenant le nom et les points de vie
         // "Nom : {0}, Hp : {1}"
         //
         // @return string le nom et les points de vie selon le format établi
+        public string enumererStats()
+        {
+            string message = "nom : " + this.nom + ", Hp : " + stats[4];
+
+            return message;
+        } //Fait à vérifier
     }
 }
