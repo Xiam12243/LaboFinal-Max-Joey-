@@ -37,6 +37,14 @@ namespace LaboFinal_A22
         // @param int dmg          le nombre de points de dommage de base pour l'habilete
         // @param int recuperation le nombre de tour entre chaque utilisation de l'habilete
         // @param int id           l'identificateur unique de l'habilete
+        public Habilete(string[] stats)
+        {
+            this.nom= stats[0];
+            this.dmg = Convert.ToInt32(stats[1]);
+            this.recuperation = Convert.ToInt32(stats[2]);
+            this.id= Convert.ToInt32(stats[3]);
+            this.tour = 0;
+        } //Fait à vérifier
 
         // executer
         //
@@ -45,9 +53,22 @@ namespace LaboFinal_A22
         //
         // @param int matt l'attaque magique du personnage qui utilise l'habilete
         // @return le nombre de points de dommage total (attaque magique + dommage de l'habilete)
+        public int executer (int matt)
+        {
+            this.tour = this.recuperation;
+
+            int dmg = matt + this.dmg;
+
+
+            return dmg;
+        } //Fait à vérifier
 
         // recuperer
         //
         // enleve 1 tour d'attente à l'attribut tour si il est plus grand que 0
+        public void recuperer()
+        {
+            this.tour--;
+        } //Fait à vérifier
     }
 }
