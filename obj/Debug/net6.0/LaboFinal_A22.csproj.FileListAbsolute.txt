@@ -3,3 +3,8 @@ C:\Users\lauri\OneDrive\Bureau\AAA-LaboA22\obj\Debug\net6.0\LaboFinal_A22.Genera
 C:\Users\lauri\OneDrive\Bureau\AAA-LaboA22\obj\Debug\net6.0\LaboFinal_A22.AssemblyInfoInputs.cache
 C:\Users\lauri\OneDrive\Bureau\AAA-LaboA22\obj\Debug\net6.0\LaboFinal_A22.AssemblyInfo.cs
 C:\Users\lauri\OneDrive\Bureau\AAA-LaboA22\obj\Debug\net6.0\LaboFinal_A22.csproj.CoreCompileInputs.cache
+C:\Users\jgoss\OneDrive\Documents\Cégep\Session 1\Programmation 1\Exam\Labo\LaboFinal-Max-Joey-\obj\Debug\net6.0\LaboFinal_A22.csproj.AssemblyReference.cache
+C:\Users\jgoss\OneDrive\Documents\Cégep\Session 1\Programmation 1\Exam\Labo\LaboFinal-Max-Joey-\obj\Debug\net6.0\LaboFinal_A22.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jgoss\OneDrive\Documents\Cégep\Session 1\Programmation 1\Exam\Labo\LaboFinal-Max-Joey-\obj\Debug\net6.0\LaboFinal_A22.AssemblyInfoInputs.cache
+C:\Users\jgoss\OneDrive\Documents\Cégep\Session 1\Programmation 1\Exam\Labo\LaboFinal-Max-Joey-\obj\Debug\net6.0\LaboFinal_A22.AssemblyInfo.cs
+C:\Users\jgoss\OneDrive\Documents\Cégep\Session 1\Programmation 1\Exam\Labo\LaboFinal-Max-Joey-\obj\Debug\net6.0\LaboFinal_A22.csproj.CoreCompileInputs.cache
