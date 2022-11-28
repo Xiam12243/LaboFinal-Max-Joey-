@@ -8,19 +8,24 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\lauri\\.nuget\\packages\\": {}
+    "C:\\Users\\jgoss\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lauri\\OneDrive\\Bureau\\AAA-LaboA22\\LaboFinal_A22.csproj",
+      "projectUniqueName": "C:\\Users\\jgoss\\OneDrive\\Documents\\Cégep\\Session 1\\Programmation 1\\Exam\\Labo\\LaboFinal-Max-Joey-\\LaboFinal_A22.csproj",
       "projectName": "LaboFinal_A22",
-      "projectPath": "C:\\Users\\lauri\\OneDrive\\Bureau\\AAA-LaboA22\\LaboFinal_A22.csproj",
-      "packagesPath": "C:\\Users\\lauri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lauri\\OneDrive\\Bureau\\AAA-LaboA22\\obj\\",
+      "projectPath": "C:\\Users\\jgoss\\OneDrive\\Documents\\Cégep\\Session 1\\Programmation 1\\Exam\\Labo\\LaboFinal-Max-Joey-\\LaboFinal_A22.csproj",
+      "packagesPath": "C:\\Users\\jgoss\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jgoss\\OneDrive\\Documents\\Cégep\\Session 1\\Programmation 1\\Exam\\Labo\\LaboFinal-Max-Joey-\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\lauri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jgoss\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

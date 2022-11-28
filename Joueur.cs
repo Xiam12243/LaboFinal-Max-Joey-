@@ -10,6 +10,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,37 +21,56 @@ namespace LaboFinal_A22
     {
         // attributs (public)
         // un nom 
-        // att, matt, def, mdef, hp des entiers
+        public string name;
+        // (0)att, (1)matt, (2)def, (3)mdef, (4)hp, (5)hpTotal des entiers
+        public int[] stats = new int[5];
         // habilete un attribut du type Habilete
+        Habilete habilite;
 
         // Constructeur
         //
         // reçoit tous les attributs en paramètre sauf l'habilete
         // assigne les paramètres aux attributs correspondants
+        public Joueur(int[] stats)
+        {
+            this.stats[0] = stats[0];
+            this.stats[1] = stats[1];
+            this.stats[2] = stats[2];
+            this.stats[3] = stats[3];
+            this.stats[4] = stats[4];
+            this.stats[5] = stats[4];
+        }
 
 
         // enumererActions
         //
-        // renvoie un string contenant les actions possibles, séparées par des virgules
-        // exemple : "attaquer,boule de feu"
-        // "Attaquer" est TOUJOURS la première action possible
+        // renvoie un string contenant les actions possibles, séparées par des virgules OK
+        // exemple : "attaquer,boule de feu" ok
+        // "Attaquer" est TOUJOURS la première action possible ok
         // Ajouter l'habileté seulement si l'attribut tour de l'habileté est à 0
         //
         // @return string une chaîne de caractères contenant les actions possibles séparées par des virgules
-        public string enumererActions()
+
+        public string enumererActions ()
         {
-            string actions = "Attaquer";
-            if (this.habilete.tour <= 0)
+            string enumerer = "Attaquer";
+
+            if (habilite.tour <= 0)
             {
-                actions += "," + this.habilete.nom;
+                enumerer += "," + habilite.nom;
             }
 
-            return actions;
-        }
+
+            return enumerer;
+        } //Fait
 
         // attaquer
         //
         // renvoie la statistique d'attaque
+        public int attaquer ()
+        {
+            return this.stats[0];
+        } //Fait
 
 
         // defendre
@@ -61,20 +82,27 @@ namespace LaboFinal_A22
         // @param int dmg      le nombre de point de dommage avant la réduction par la défense
         public void defendre(bool magique, int dmg)
         {
-
             // si l'attaque est magique
-
+            if (magique = true)
+            {
                 // les dommages finaux sont le dommage - la défense magique
-
+                dmg -= this.stats[3];
+            }
             // sinon
-
+            else
+            {
                 // les dommages finaux sont le dommage - la défense
+                dmg -= this.stats[2];
+            }
 
             // si les dommages finaux sont plus grands que 0
-
+            if (dmg <0) 
+            {
                 // diminuer les points de vie du nombre de points de dommage final
+                stats[4] -= dmg;
+            }
 
-        }
+        } //Fait 
 
         // estVivant
         //
@@ -82,6 +110,17 @@ namespace LaboFinal_A22
         // 
         // @return bool vrai s'il reste des points de vie, faux sinon
 
+        public bool estVivant()
+        {
+            bool vivant = true;
+
+            if (stats[0] <= 0)
+            {
+                vivant = false;
+            }
+
+            return vivant;
+        } //Fait
 
         // enumererStats
         // 
@@ -89,6 +128,11 @@ namespace LaboFinal_A22
         // "Nom : {0}, Hp : {1}"
         //
         // @return string le nom et les points de vie selon le format établi
+
+        public string enumererStats ()
+        { 
+            return "Nom : " + name + ", Hp : " + stats[4];
+        } //Fait
 
     }
 }
