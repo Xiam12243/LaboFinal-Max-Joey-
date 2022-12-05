@@ -25,7 +25,7 @@ namespace LaboFinal_A22
         // (0)att, (1)matt, (2)def, (3)mdef, (4)hp, (5)hpTotal des entiers
         public int[] stats = new int[5];
         // habilete un attribut du type Habilete
-        public Habilete habilite;
+        public Habilete habilete;
 
         // Constructeur
         //
@@ -56,9 +56,9 @@ namespace LaboFinal_A22
         {
             string enumerer = "Attaquer";
 
-            if (this.habilite.tour <= 0)
+            if (this.habilete.tour <= 0)
             {
-                enumerer += "," + this.habilite.nom;
+                enumerer += "," + this.habilete.nom;
             }
 
 
