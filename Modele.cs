@@ -38,19 +38,22 @@ namespace LaboFinal_A22
             // dmg : 25
             // recup : 4
             // id : 0
-            Habilete coup = new Habilete("Coup Héroïque", 25, 4, 0);
+            string[] statsCoupHeroique = { "Coup Héroïque", "25", "4", "0" };
+            Habilete coup = new Habilete(statsCoupHeroique);
             //crée une instance de l'habilete : 
             // Attaque Surprise
             // dmg : 40
             // recup : 6
             // id : 1
-            Habilete attaque = new Habilete("Attaque Surprise", 40, 6, 1);
+            string[] statsAttaque = { "Attaque Surprise", "40", "6", "1" };
+            Habilete attaque = new Habilete(statsAttaque);
             //crée une instance de l'habilete : 
             // Boule De Feu
             // dmg : 50
             // recup : 2
             // id : 2
-            Habilete boule = new Habilete("Boule De Feu", 25, 4, 2);
+            string[] statsBoule = { "Boule De Feu", "25", "4", "2"};
+            Habilete boule = new Habilete(statsBoule);
             // ajoute toues les habiletés à l'attribut habiletes
             this.habiletes.Append(coup);
             this.habiletes.Append(attaque);
@@ -94,7 +97,7 @@ namespace LaboFinal_A22
 
             // ne pas oublier d'assigner l'habilete au joueur selon le id après la construction
             int id = Convert.ToInt16(stats[6]);
-            joueur.habilite = habiletes[id]; 
+            joueur.habilete = habiletes[id]; 
 
             // retourner le joueur configuré
             return joueur;

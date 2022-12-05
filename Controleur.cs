@@ -131,6 +131,7 @@ namespace LaboFinal_A22
             for (int i = 0; i < combatants.Length; i++)
             {
                 int combatant = rng.Next(this.ennemis.Length);
+
                 combatants[i] = new Ennemi(
                     this.ennemis[combatant].nom,
                     this.ennemis[combatant].att,
@@ -188,7 +189,7 @@ namespace LaboFinal_A22
                 }
                 else if (action == 1)
                 {
-                    combatants[cible].defendre(true, joueur.habilete.executer(joueur.matt));
+                    combatants[cible].defendre(true, joueur.habilete.executer(joueur.stats[1]));
                 }
 
                 for (int i = 0; i < combatants.Length; i++)
