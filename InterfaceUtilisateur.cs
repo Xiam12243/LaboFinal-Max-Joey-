@@ -37,6 +37,7 @@ namespace LaboFinal_A22
         public string menuCreation;
         public string menuFin;
         public string instructions;
+        public List<char> carte;
         public int largeur;
         public int hauteur;
         public string[] arene;
