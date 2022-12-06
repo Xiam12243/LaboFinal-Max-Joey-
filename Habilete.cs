@@ -55,7 +55,7 @@ namespace LaboFinal_A22
         // @return le nombre de points de dommage total (attaque magique + dommage de l'habilete)
         public int executer (int matt)
         {
-            this.tour = this.recuperation;
+            this.tour += this.recuperation;
 
             int dmg = matt + this.dmg;
 

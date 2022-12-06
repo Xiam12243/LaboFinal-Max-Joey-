@@ -99,7 +99,7 @@ namespace LaboFinal_A22
             this.ui.afficherEntete();
             string nom = this.ui.demanderNom();
             int classe = this.ui.afficherMenuCreation();
-            this.joueur = this.usine.genererJoueur(this.classes[classe], nom);
+            this.joueur = this.usine.genererJoueur(this.classes[classe-1], nom);
             this.etat = 2;
         }
 

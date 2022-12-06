@@ -39,7 +39,6 @@ namespace LaboFinal_A22
             this.stats[2] = Convert.ToInt32(stats[3]);
             this.stats[3] = Convert.ToInt32(stats[4]);
             this.stats[4] = Convert.ToInt32(stats[5]);
-            this.stats[5] = Convert.ToInt32(stats[5]);
         } //Fait à tester
 
 
